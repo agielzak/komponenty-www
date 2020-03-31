@@ -1,0 +1,51 @@
+/* ==== GENERAL STYLES ==== */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  /* ==== A SIMPLE TOP NAVIGATION ==== */
+  
+  nav {
+    font-size: 0;
+  }
+  
+  nav ul {
+    background-color: #eee;
+    text-align: center;
+  }
+  
+  nav li {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    height: 3rem;
+    border-bottom: 1px solid #ccc;
+    /* Właściwości line-height i height specjalnie mają tę samą wartość. Ten mały hack wyśrodkowuje elementy w pionie. Podczas gdy właściwość border-bottom tworzy widoczne przerwy między przedmiotami. */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #c74f78;
+    display: block; /* najważniejszą regułą jest display: block;. Dzięki niej kotwice zajmują całą możliwą przestrzeń wewnątrz tagów li. To rozszerza przestrzeń, na którą można kliknąć całą szerokość i wysokość przycisku, co sprawia, że łatwiej go trafić. */
+  }
+  
+  nav a:hover {
+    background-color: #fff;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  nav a.active {
+    background-color: #c74f78;
+    color: #eee;
+  }
+  
+  @media (min-width: 600px) {
+    
+    nav li {
+      display: inline-block;
+      border-bottom: none;
+      width: 7.5rem;
+    }
+  }

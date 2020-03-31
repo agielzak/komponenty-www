@@ -1,0 +1,105 @@
+/* The base of every button */
+.btn {
+    display: inline-block; /* Właściwość display: inline-block jest kluczowa. Elementy kotwiczne są domyślnie inline, co oznacza, że nie przyjmują żadnych właściwości modelu pudełkowego (box model) (takich jak dopełnienie lub margines). Ta reguła to zmienia i pozwala nam zrobić z nich przyciski. */
+    text-decoration: none; /* Następne pięć reguł (text-decoration, font-family, text-align, font-size i line-height) służy do podstawowej stylizacji typografii. */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.42857143;
+    padding: 6px 12px; /* padding daje tekstowi trochę miejsca na oddychanie, żeby przycisk nie wyglądał na zapchany. */
+    margin-bottom: 10px; /* Reguła margin-bottom stworzy trochę miejsca pod przyciskiem. Nie będzie on dotykał innych elementów jeśli będzie ściśnięty na małym ekranie. */
+    border: 1px solid transparent; /* Właściwości border i border-radius dodają zaokrągloną, przezroczystą ramkę. Na razie nie możesz jej widzieć z powodu wartości transparent ale niedługo stanie się widoczna, gdy nadamy jej kolor klasą kontekstową. */
+    border-radius: 4px;
+    white-space: nowrap; /* Właściwość white-space: nowrap zapobiega tworzeniu się kolejnych linijek tekstu wewnątrz elementu (co mogłoby być problemem przy zbyt długim tekście przycisku). */
+    vertical-align: middle; /* I na koniec vertical-align: middle wyrówna przycisk do pionowego środka linii, na której obecnie się znajduje. */
+    color: #fff;
+  }
+  
+  .button-nav {
+    display: inline-block; 
+    text-decoration: none; 
+    font-family: Arial, sans-serif; 
+    text-align: center;
+    font-size: 1rem; 
+    padding: .8rem 1rem; /* dopełnienie na górze i na dole 0.8rem, po lewo i praco 1rem. Sprawia to, że przyciski wydają się podłużne. Używając "rem-ów", gwarantujemy, że w przypadku zmiany czcionki podstawowej przez użytkownika, przyciki również się zwiększą. */
+    border: 1px solid #000; 
+    color: #000; 
+    transition: background-color .2s ease-in-out; /* Przejścia są skrótem, który pobiera kilka wartości. Tym razem damy mu trzy wartości:
+  
+  transition-property: właściwość dla której efekt przejścia ma być zastosowany (w tym wypadku background-color),
+  transition-duration: długość animacji (w tym wypadku .15s),
+  transition-timing-function: prędkość krzywej efektu (w tym wypadku ease-in-out tworzy animację z wolnym początkiem i końcem). */
+  }
+  
+  .button-nav:hover {
+    color: #fff;
+    background-color: #000;
+    transition: background-color .2s ease-in-out;
+  }
+  
+  /* Additional styles for "Default" */
+  .btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+  }
+  
+  .btn-default:hover {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+  }
+  
+  /* Additional styles for "Primary" */
+  .btn-primary {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+  }
+  
+  .btn-primary:hover {
+    background-color: #286090;
+    border-color: #204d74;
+  }
+  
+  /* Additional styles for "Success" */
+  .btn-success {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+  }
+  
+  .btn-success:hover {
+    background-color: #449d44;
+    border-color: #398439;
+  }
+  
+  /* Additional styles for "Info" */
+  .btn-info {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+  }
+  
+  .btn-info:hover {
+    background-color: #31b0d5;
+    border-color: #269abc;
+  }
+  
+  /* Additional styles for "Warning" */
+  .btn-warning {
+    background-color: #f0ad43;
+    border-color: #eea236;
+  }
+  
+  .btn-warning:hover {
+    background-color: #ec971f;
+    border-color: #d58512;
+  }
+  
+  /* Additional styles for "Danger" */
+  .btn-danger {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c9302c;
+    border-color: #ac2925;
+  }
